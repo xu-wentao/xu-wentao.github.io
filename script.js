@@ -1,6 +1,7 @@
 const glow = document.querySelector('.cursor-glow');
 const progress = document.querySelector('.scroll-progress');
 const terminalOutput = document.querySelector('#terminal-output');
+const terminalCard = document.querySelector('.terminal-card');
 const year = document.querySelector('#year');
 
 if (year) {
@@ -13,13 +14,16 @@ window.addEventListener('pointermove', (event) => {
   glow.style.top = `${event.clientY}px`;
 });
 
-window.addEventListener('scroll', () => {
+function updateProgress() {
   if (!progress) return;
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
   const ratio = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
   progress.style.width = `${ratio}%`;
-});
+}
+
+window.addEventListener('scroll', updateProgress, { passive: true });
+updateProgress();
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -30,7 +34,7 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.16 }
+  { threshold: 0.16, rootMargin: '0px 0px -40px 0px' }
 );
 
 document.querySelectorAll('.reveal').forEach((element) => {
@@ -50,8 +54,9 @@ const terminalLines = [
 ];
 
 function typeTerminal() {
-  if (!terminalOutput) return;
+  if (!terminalOutput || terminalOutput.dataset.typed === 'true') return;
 
+  terminalOutput.dataset.typed = 'true';
   const fullText = terminalLines.join('\n');
   let index = 0;
 
@@ -65,18 +70,20 @@ function typeTerminal() {
   }, 22);
 }
 
-const terminalObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        typeTerminal();
-        terminalObserver.disconnect();
-      }
-    });
-  },
-  { threshold: 0.35 }
-);
+if (terminalOutput && terminalCard) {
+  const terminalObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          typeTerminal();
+          terminalObserver.disconnect();
+        }
+      });
+    },
+    { threshold: 0.35 }
+  );
 
-if (terminalOutput) {
-  terminalObserver.observe(terminalOutput);
+  terminalObserver.observe(terminalCard);
+} else {
+  typeTerminal();
 }
