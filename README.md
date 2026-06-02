@@ -1,6 +1,6 @@
 # xuwentao.github.io
 
-Personal homepage for xuwentao.
+Personal homepage for **xuwentao**.
 
 ## Design direction
 
@@ -9,13 +9,13 @@ Personal homepage for xuwentao.
 - Lightweight motion: scroll reveal, cursor glow, orbit animation, terminal typing
 - Static deployment through GitHub Pages
 
-## Files
+## Structure
 
 ```text
-index.html
-styles.css
-script.js
-.nojekyll
+index.html    # page structure and content
+styles.css    # visual system and responsive layout
+script.js     # interactions and animations
+.nojekyll     # disable Jekyll processing
 ```
 
 ## Local preview
@@ -28,4 +28,10 @@ Then open:
 
 ```text
 http://localhost:8080
+```
+
+## Live site
+
+```text
+https://xu-wentao.github.io
 ```
