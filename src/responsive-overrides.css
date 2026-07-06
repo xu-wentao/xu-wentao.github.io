@@ -1,0 +1,43 @@
+/* Keeps the hero orbit scale responsive after the entrance animation completes. */
+.hero-right {
+  --hero-scale: 1;
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(calc(var(--hero-scale, 1) * 0.85));
+  }
+  to {
+    opacity: 1;
+    transform: scale(var(--hero-scale, 1));
+  }
+}
+
+@media (max-width: 1280px) {
+  .hero-right {
+    --hero-scale: 0.85;
+    transform: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-right {
+    --hero-scale: 0.7;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-right {
+    --hero-scale: 0.5;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-right {
+    --hero-scale: 0.4;
+    transform: none;
+  }
+}
