@@ -5,225 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="xuwentao - Cloud Native and AI Infrastructure engineer focused on Kubernetes, observability, GPU infrastructure, and cost-aware AI agents."
+      content="xuwentao - AI infrastructure and cloud native platform engineer focused on Kubernetes, scheduling, observability, and resilient model platforms."
     />
-    <meta name="theme-color" content="#ffffff" />
-    <meta property="og:title" content="xuwentao - Cloud Native & AI Infrastructure" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:title" content="xuwentao - AI Infrastructure & Cloud Native" />
     <meta
       property="og:description"
-      content="Practical infrastructure around Kubernetes scheduling, observability, GPU clusters, and cost-aware AI agents."
+      content="Building resilient AI infrastructure, Kubernetes platforms, and practical engineering systems."
     />
     <meta property="og:type" content="website" />
-    <title>xuwentao · Cloud Native & AI Infrastructure</title>
+    <title>xuwentao · AI Infrastructure & Cloud Native</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="noise" aria-hidden="true"></div>
-    <div class="cursor-glow" aria-hidden="true"></div>
-    <div class="scroll-progress" aria-hidden="true"></div>
+    <main class="landing" id="top">
+      <video
+        class="hero-video"
+        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260622_204221_5339e40b-e73d-4ab0-9c65-79c18c66fd50.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-hidden="true"
+      ></video>
 
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Back to top">
-        <span class="brand-mark">x</span>
-        <span>xuwentao</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#focus">Focus</a>
-        <a href="#work">Work</a>
-        <a href="#oss">OSS</a>
-        <a href="#contact">Contact</a>
+      <div class="video-shade" aria-hidden="true"></div>
+
+      <nav class="navbar" aria-label="Primary navigation">
+        <div class="nav-left">
+          <a class="logo" href="#top" aria-label="Back to home">xuwentao</a>
+          <div class="desktop-links">
+            <a href="#top">Home</a>
+            <a href="https://github.com/xu-wentao" target="_blank" rel="noreferrer">Projects</a>
+            <a href="https://github.com/xu-wentao/grandet-agent" target="_blank" rel="noreferrer">Studio</a>
+            <a href="mailto:cutenear1993@yahoo.com">Reach Us</a>
+          </div>
+        </div>
+
+        <a class="talk-button desktop-talk" href="mailto:cutenear1993@yahoo.com">Let's Talk</a>
+
+        <button class="mobile-toggle" type="button" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg class="icon icon-x" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12" />
+          </svg>
+        </button>
       </nav>
-    </header>
 
-    <main id="top">
-      <section class="hero section-shell">
-        <div class="hero-copy reveal">
-          <div class="eyebrow">
-            <span class="pulse-dot"></span>
-            Cloud Native · AI Infrastructure · Open Source
-          </div>
-          <h1>
-            Building practical infrastructure for
-            <span>Kubernetes, GPU clusters, and AI agents.</span>
+      <div class="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-inner">
+          <a href="#top" data-close-menu>Home</a>
+          <a href="https://github.com/xu-wentao" target="_blank" rel="noreferrer" data-close-menu>Projects</a>
+          <a href="https://github.com/xu-wentao/grandet-agent" target="_blank" rel="noreferrer" data-close-menu>Studio</a>
+          <a href="mailto:cutenear1993@yahoo.com" data-close-menu>Reach Us</a>
+          <a class="mobile-talk" href="mailto:cutenear1993@yahoo.com" data-close-menu>Let's Talk</a>
+        </div>
+      </div>
+
+      <section class="hero-content" aria-labelledby="hero-title">
+        <div class="hero-top">
+          <p class="badge">Cloud Native & AI Systems</p>
+          <h1 id="hero-title">
+            Building resilient<br />
+            AI infrastructure,<br />
+            one cluster at a time.
           </h1>
-          <p class="hero-lead">
-            I work around Kubernetes scheduling, observability, GPU resource management,
-            and cost-aware AI agent tooling — turning infrastructure ideas into usable systems.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="https://github.com/xu-wentao" target="_blank" rel="noreferrer">
-              View GitHub
-            </a>
-            <a class="button secondary" href="#work">Explore work</a>
-          </div>
-          <div class="hero-tags" aria-label="Core technical tags">
-            <span>Go</span>
-            <span>Python</span>
-            <span>Kubernetes</span>
-            <span>Prometheus</span>
-            <span>Volcano</span>
-            <span>GPU Infra</span>
-          </div>
         </div>
 
-        <div class="hero-visual reveal delay-1" aria-label="Infrastructure orbit visualization">
-          <div class="orbit-card">
-            <div class="orbit orbit-one"></div>
-            <div class="orbit orbit-two"></div>
-            <div class="orbit-center">
-              <strong>xuwentao</strong>
-              <span>infra systems</span>
-            </div>
-            <div class="orbit-node node-a">K8s</div>
-            <div class="orbit-node node-b">GPU</div>
-            <div class="orbit-node node-c">OSS</div>
-            <div class="orbit-node node-d">AI</div>
-            <div class="orbit-node node-e">Obs</div>
-          </div>
-        </div>
-      </section>
-
-      <section id="focus" class="section-shell section-block">
-        <div class="section-heading reveal">
-          <span class="section-kicker">Focus areas</span>
-          <h2>Infrastructure domains I keep returning to.</h2>
+        <div class="hero-bottom">
           <p>
-            A compact map of the systems, components, and problems that shape my current work.
+            Turning Kubernetes, scheduling, observability, and model platforms into systems that are
+            useful, measurable, and maintainable.
           </p>
-        </div>
-
-        <div class="focus-grid">
-          <article class="focus-card reveal">
-            <div class="card-icon">01</div>
-            <h3>Kubernetes Scheduling</h3>
-            <p>Volcano, DRA, PodGroup, queues, capacity scheduling, and batch workloads.</p>
-          </article>
-          <article class="focus-card reveal delay-1">
-            <div class="card-icon">02</div>
-            <h3>Observability</h3>
-            <p>Prometheus Operator, Thanos, Grafana, exporter design, and alerting platforms.</p>
-          </article>
-          <article class="focus-card reveal delay-2">
-            <div class="card-icon">03</div>
-            <h3>AI / GPU Infrastructure</h3>
-            <p>NVIDIA Container Toolkit, GPU Operator, HAMi, AIBrix, and cluster-level GPU usage.</p>
-          </article>
-          <article class="focus-card reveal delay-3">
-            <div class="card-icon">04</div>
-            <h3>Cost-aware Agents</h3>
-            <p>Local-first CLI workflows, model routing, fallback strategies, and cost-first execution.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="work" class="section-shell section-block work-layout">
-        <div class="section-heading reveal">
-          <span class="section-kicker">Featured project</span>
-          <h2>GrandetAgent</h2>
-          <p>
-            A local-first, cost-aware Agent CLI exploring how to route tasks across paid and free models
-            while keeping cost as the first-class constraint.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/xu-wentao/grandet-agent" target="_blank" rel="noreferrer">Repository</a>
-            <a href="https://github.com/xu-wentao" target="_blank" rel="noreferrer">More projects</a>
-          </div>
-        </div>
-
-        <div class="terminal-card reveal delay-1" aria-label="GrandetAgent terminal demo">
-          <div class="terminal-bar">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <pre><code id="terminal-output"></code><span class="terminal-cursor">▌</span></pre>
-        </div>
-      </section>
-
-      <section id="oss" class="section-shell section-block">
-        <div class="section-heading reveal">
-          <span class="section-kicker">Open source</span>
-          <h2>Selected contribution map.</h2>
-          <p>
-            Contributions are grouped by engineering area rather than by raw repository list.
-          </p>
-        </div>
-
-        <div class="oss-timeline">
-          <article class="oss-item reveal">
-            <span class="timeline-dot"></span>
-            <div>
-              <h3>Apache ShardingSphere-on-Cloud</h3>
-              <p>StorageNode, AWS RDS / Aurora, PITR, backup lifecycle, and operator charts.</p>
-            </div>
-          </article>
-          <article class="oss-item reveal delay-1">
-            <span class="timeline-dot"></span>
-            <div>
-              <h3>Prometheus Operator</h3>
-              <p>Thanos sidecar HTTP client configuration and Secret-based configuration flow.</p>
-            </div>
-          </article>
-          <article class="oss-item reveal delay-2">
-            <span class="timeline-dot"></span>
-            <div>
-              <h3>Volcano</h3>
-              <p>DRA capacity scheduling, PodGroup listing optimization, HyperNode validation, and tests.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-shell section-block">
-        <div class="section-heading reveal">
-          <span class="section-kicker">Stack</span>
-          <h2>Tools and systems I use often.</h2>
-        </div>
-
-        <div class="stack-grid">
-          <div class="stack-group reveal">
-            <h3>Languages</h3>
-            <div class="stack-list">
-              <span>Go</span><span>Python</span><span>TypeScript</span><span>Rust</span>
-            </div>
-          </div>
-          <div class="stack-group reveal delay-1">
-            <h3>Cloud Native</h3>
-            <div class="stack-list">
-              <span>Kubernetes</span><span>Helm</span><span>Operators</span><span>Volcano</span><span>Prometheus</span>
-            </div>
-          </div>
-          <div class="stack-group reveal delay-2">
-            <h3>AI Infra</h3>
-            <div class="stack-list">
-              <span>vLLM</span><span>AIBrix</span><span>GPU Operator</span><span>NVIDIA Toolkit</span><span>HAMi</span>
-            </div>
-          </div>
-          <div class="stack-group reveal delay-3">
-            <h3>Systems</h3>
-            <div class="stack-list">
-              <span>Linux</span><span>Containerd</span><span>Networking</span><span>Scheduling</span><span>Observability</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section-shell contact-section reveal">
-        <div>
-          <span class="section-kicker">Contact</span>
-          <h2>Interested in infrastructure that is useful, measurable, and maintainable.</h2>
-        </div>
-        <div class="contact-actions">
-          <a class="button primary" href="mailto:cutenear1993@yahoo.com">Email me</a>
-          <a class="button secondary" href="https://github.com/xu-wentao" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="cta-button" href="https://github.com/xu-wentao" target="_blank" rel="noreferrer">
+            Explore Work
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <span>© <span id="year"></span> xuwentao</span>
-      <span>Cloud Native · AI Infrastructure · OSS</span>
-    </footer>
 
     <script src="./script.js"></script>
   </body>
