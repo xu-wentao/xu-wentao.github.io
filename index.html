@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="description" content="Marketeam - marketing talent platform." />
+    <meta name="description" content="xuwentao - AI infrastructure and cloud native engineer focused on Kubernetes, scheduling, observability, and cost-aware agents." />
     <meta name="theme-color" content="#060218" />
-    <title>Marketeam · Marketing Talent Platform</title>
+    <meta property="og:title" content="xuwentao · AI Infrastructure & Cloud Native" />
+    <meta property="og:description" content="Kubernetes, Volcano, observability, AI infra, and cost-aware agent tooling." />
+    <meta property="og:type" content="website" />
+    <title>xuwentao · AI Infrastructure & Cloud Native</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Urbanist:wght@600;700&display=swap" rel="stylesheet" />
@@ -15,36 +18,44 @@
     <main class="app">
       <header class="site-header">
         <div class="header-left">
-          <a class="brand" href="#"><img id="brand-logo" alt="Marketeam" /></a>
+          <a class="brand" href="#top" aria-label="xuwentao home"><span class="brand-mark">xw</span><span>xuwentao</span></a>
           <nav class="nav-links" aria-label="Primary navigation">
-            <a class="link-underline dark" href="#">Your Team</a>
-            <a class="link-underline dark" href="#">Solutions</a>
-            <a class="link-underline dark" href="#">Blog</a>
-            <a class="link-underline dark" href="#">Pricing</a>
+            <a class="link-underline dark" href="#work">Work</a>
+            <a class="link-underline dark" href="#oss">Open Source</a>
+            <a class="link-underline dark" href="#projects">Projects</a>
+            <a class="link-underline dark" href="#contact">Contact</a>
           </nav>
         </div>
         <div class="header-actions">
-          <a class="login-link link-underline light" href="#">Log In</a>
-          <div class="btn-border-wrap small"><a class="pill-btn join-btn" href="#"><span>Join Now</span></a></div>
+          <a class="github-link link-underline light" href="https://github.com/xu-wentao" target="_blank" rel="noreferrer">GitHub</a>
+          <div class="btn-border-wrap small"><a class="pill-btn join-btn" href="mailto:cutenear1993@yahoo.com"><span>Reach Me</span></a></div>
         </div>
       </header>
 
-      <section class="hero">
+      <section class="hero" id="top">
         <div class="hero-left">
-          <h1 class="hero-title" aria-label="Unlock Top Marketing Talent You Thought Was Out of Reach -- Now Just One Click Away!"></h1>
+          <p class="eyebrow">Kubernetes · AI Infra · Observability · Agents</p>
+          <h1 class="hero-title" aria-label="Building practical infrastructure for Kubernetes GPU clusters and cost-aware AI agents"></h1>
+          <p class="hero-summary">I build platform systems around cluster scheduling, model infrastructure, production observability, and local-first AI engineering tools.</p>
           <div class="hero-actions">
-            <div class="btn-border-wrap large">
-              <a class="pill-btn start-btn" href="#"><span>Start Project</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6" /></svg></a>
-            </div>
-            <div class="cursor-badge" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5.6 2.7 26 17.1c1.2.8.7 2.7-.8 2.8l-8.8.6-4.7 7.4c-.8 1.2-2.7.8-2.9-.7L5.6 2.7Z" /></svg><span>David</span></div>
+            <div class="btn-border-wrap large"><a class="pill-btn start-btn" href="https://github.com/xu-wentao/grandet-agent" target="_blank" rel="noreferrer"><span>Explore GrandetAgent</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6" /></svg></a></div>
+            <div class="cursor-badge" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5.6 2.7 26 17.1c1.2.8.7 2.7-.8 2.8l-8.8.6-4.7 7.4c-.8 1.2-2.7.8-2.9-.7L5.6 2.7Z" /></svg><span>infra systems</span></div>
           </div>
         </div>
-        <div class="hero-right" aria-label="Marketing talent visualization">
+
+        <div class="hero-right" aria-label="Project orbit visualization">
           <div class="circles-stage" id="circles-stage"></div>
         </div>
       </section>
 
-      <section class="logo-ticker" aria-label="Partner logos"><div class="ticker-track" id="ticker-track"></div></section>
+      <section class="panel-strip" id="work" aria-label="Profile summary">
+        <article><span>Current Focus</span><strong>AI cluster platform</strong><p>Kubernetes, resource orchestration, training reliability, and internal PaaS control planes.</p></article>
+        <article id="oss"><span>Open Source</span><strong>Volcano & ShardingSphere</strong><p>Scheduling, DRA, cloud database operator work, reviews, tests, and docs.</p></article>
+        <article id="projects"><span>Featured Project</span><strong>GrandetAgent</strong><p>A local-first cost-aware Agent CLI that routes tasks through cheaper models first.</p></article>
+      </section>
+
+      <section class="logo-ticker" aria-label="Repository and technology ticker"><div class="ticker-track" id="ticker-track"></div></section>
+      <a class="contact-float" id="contact" href="mailto:cutenear1993@yahoo.com">cutenear1993@yahoo.com</a>
     </main>
     <script src="./script.js"></script>
   </body>
