@@ -1,43 +1,161 @@
-/* Keeps the hero orbit scale responsive after the entrance animation completes. */
-.hero-right {
-  --hero-scale: 1;
+/*
+  Responsive containment fixes.
+
+  The outer orbit is 797px and the badges sit on top of that orbit, so the
+  effective artwork is closer to 900px wide. Keep that full artwork inside an
+  internal stage, then scale the stage down to fit the available viewport.
+*/
+.app {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-@keyframes scale-in {
+.hero {
+  height: auto;
+  min-height: calc(100svh - 250px);
+}
+
+.hero-right {
+  --stage-scale: 0.8;
+  flex: 0 1 min(720px, 46vw);
+  width: min(720px, 46vw);
+  height: min(720px, 46vw);
+  min-width: 0;
+  margin: 0;
+  overflow: visible;
+  transform: none !important;
+  animation: hero-visual-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+.circles-stage {
+  width: 900px !important;
+  height: 900px !important;
+  transform: scale(var(--stage-scale));
+  transform-origin: center;
+}
+
+@keyframes hero-visual-in {
   from {
     opacity: 0;
-    transform: scale(calc(var(--hero-scale, 1) * 0.85));
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
-    transform: scale(var(--hero-scale, 1));
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero-right {
+    --stage-scale: 0.72;
+    flex-basis: min(650px, 44vw);
+    width: min(650px, 44vw);
+    height: min(650px, 44vw);
   }
 }
 
 @media (max-width: 1280px) {
+  .hero {
+    gap: 8px;
+  }
+
   .hero-right {
-    --hero-scale: 0.85;
-    transform: none;
+    --stage-scale: 0.62;
+    flex-basis: min(560px, 43vw);
+    width: min(560px, 43vw);
+    height: min(560px, 43vw);
+    margin-right: 0;
+  }
+}
+
+@media (max-height: 820px) and (min-width: 1025px) {
+  .site-header {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .hero {
+    min-height: 520px;
+    padding-bottom: 0;
+  }
+
+  .hero-title {
+    min-height: 220px;
+    font-size: 56px;
+    line-height: 58px;
+  }
+
+  .hero-right {
+    --stage-scale: 0.58;
+    flex-basis: 522px;
+    width: 522px;
+    height: 522px;
+  }
+
+  .profile-strip {
+    margin-top: 8px;
   }
 }
 
 @media (max-width: 1024px) {
+  .hero {
+    align-items: stretch;
+    min-height: auto;
+    gap: 20px;
+  }
+
+  .hero-left {
+    max-width: 760px;
+  }
+
   .hero-right {
-    --hero-scale: 0.7;
-    transform: none;
+    --stage-scale: 0.62;
+    align-self: center;
+    flex: 0 0 558px;
+    width: min(558px, calc(100vw - 72px));
+    height: min(558px, calc(100vw - 72px));
+    margin: 0 auto -18px;
   }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    gap: 12px;
+  }
+
   .hero-right {
-    --hero-scale: 0.5;
-    transform: none;
+    --stage-scale: 0.42;
+    flex-basis: 378px;
+    width: min(378px, calc(100vw - 48px));
+    height: min(378px, calc(100vw - 48px));
+    margin: -10px auto -8px;
+  }
+
+  .profile-strip {
+    margin-top: 0;
   }
 }
 
 @media (max-width: 480px) {
   .hero-right {
-    --hero-scale: 0.4;
-    transform: none;
+    --stage-scale: 0.32;
+    flex-basis: 288px;
+    width: min(288px, calc(100vw - 40px));
+    height: min(288px, calc(100vw - 40px));
+    margin: -6px auto 0;
+  }
+
+  .profile-strip,
+  .logo-ticker {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-right {
+    --stage-scale: 0.28;
+    flex-basis: 252px;
+    width: min(252px, calc(100vw - 32px));
+    height: min(252px, calc(100vw - 32px));
   }
 }
