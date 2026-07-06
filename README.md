@@ -1,33 +1,48 @@
 # xuwentao.github.io
 
-Personal homepage for **xuwentao**.
+Personal homepage for **xuwentao** — a Cloud Native / AI Infrastructure engineer focused on Kubernetes, GPU/NPU cluster platforms, observability, scheduling, and cost-aware AI agent tooling.
 
 ## Design direction
 
-- White-background product-style landing page
+- Full-viewport product-style hero
 - Cloud Native / AI Infrastructure positioning
-- Lightweight motion: scroll reveal, cursor glow, orbit animation, terminal typing
+- React + Vite implementation
+- Lightweight motion: typewriter heading, count-up metric, orbit visualization, animated gradient buttons, and technology ticker
 - Static deployment through GitHub Pages
+
+## Tech stack
+
+- React
+- Vite
+- Inter and Urbanist from Google Fonts
+- Pure CSS animations
+- GitHub Actions deployment to GitHub Pages
 
 ## Structure
 
 ```text
-index.html    # page structure and content
-styles.css    # visual system and responsive layout
-script.js     # interactions and animations
-.nojekyll     # disable Jekyll processing
+index.html                 # Vite HTML entry
+src/main.jsx               # React bootstrap
+src/App.jsx                # Page components and animation hooks
+src/styles.css             # Visual system, motion, and responsive layout
+vite.config.js             # Vite config
+.github/workflows/deploy.yml # GitHub Pages build/deploy workflow
+.nojekyll                  # disable Jekyll processing
 ```
 
 ## Local preview
 
 ```bash
-python3 -m http.server 8080
+npm install
+npm run dev
 ```
 
-Then open:
+Then open the local Vite URL printed in the terminal.
 
-```text
-http://localhost:8080
+## Build
+
+```bash
+npm run build
 ```
 
 ## Live site
